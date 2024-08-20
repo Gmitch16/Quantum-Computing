@@ -1,0 +1,21 @@
+!pip install Qiskit 
+from qiskit.visualization import plot_bloch_vector
+plot_bloch_vector([0,1,0], title="New Bloch Sphere");
+
+def PlotKet(K):
+    #define Pauli Matrices 
+    sx=np.array([[0,1],[1,0]])
+    sy=np.array([[0,0+-1j],[0+1j,0]])
+    sz=np.array([[1,0],[0,-1]])
+
+    #get outer product of ket to make projection operator O
+    B=Bra(K)
+    O=Outer(K,B)
+
+    #calculate coefficients
+    B=np.trace(0.dot(sx)).real
+    C=np.trace(0.dot(sy)).real
+    D=np.trace(0.dot(sz)).real
+
+    #Plot Bloch Sphere 
+    plot_bloch_vector([B,C,D], title= 'State {}' . format(K)); 
