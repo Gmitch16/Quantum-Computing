@@ -1,0 +1,36 @@
+import numpy as np
+import matplotlilb.pyplot as plt
+%matplotlib inline
+import cmath as cm
+
+def Ket(a,b): 
+    return np.array([[a,b]])
+
+def Bra(a,b=none):
+    if b==none: 
+        return (a.conjugate()).transpose()
+    else:
+        return np.array([[a,b]])
+
+def Operator():
+    return 
+
+def Inner (B,K):            #Dimensions of what you ar inputting
+    return 
+def Outer (K,B):            #Dimensions of what you ar inputting
+    return
+
+# this method produces a coloum vector with complex entries 
+# with Real and Imaginary Coefficients between -10 & 10
+
+def GetRandom():
+    c1 = np.random.randint(-10,10)+np.random.randint(-10,10)*1j
+    c2 = np.random.randint(-10,10)+np.random.randint(-10,10)*1j
+    return Ket(c1,c2)
+
+# this method normalizes a Ket
+
+def Normalize(A):           #A needs to be a Ket
+B=Bra(A)
+N=Inner(B,A)                #be careful here with you def of Inner()
+return np.sqrt(1/N)*A
